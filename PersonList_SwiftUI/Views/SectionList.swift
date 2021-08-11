@@ -18,7 +18,7 @@ struct SectionList: View {
                     Section(header: Text("\(person.fullName)")) {
                         
                         HStack {
-                            Image(systemName: "phone")
+                            Image(systemName: "phone.fill")
                             Text("\(person.numberPhone)")
                                 .foregroundColor(.blue)
                         }

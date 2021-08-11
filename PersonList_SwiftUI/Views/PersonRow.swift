@@ -13,8 +13,23 @@ struct PersonRow: View {
     
     var body: some View {
         Form {
-            Text("E-mail: \(person.email)")
-            Text("Phone: \(person.numberPhone)")
+            Image(systemName: "person")
+                .resizable()
+                .frame(height: 270)
+                .padding()
+            
+            HStack {
+                Image(systemName: "envelope")
+                    .foregroundColor(Color.blue)
+                Text("\(person.email)")
+            }
+            
+            HStack {
+                Image(systemName: "phone")
+                    .foregroundColor(.blue)
+                Text(" \(person.numberPhone)")
+            }
+            
         }
         .navigationBarTitle(person.fullName)
     }
@@ -25,7 +40,7 @@ struct PersonRow_Previews: PreviewProvider {
         PersonRow(person: Person(
             name: "Nilo",
             surname: "Bellic",
-            email: "nikofromliberty@rs.com",
+            email: "niko_bellic@rockstargames.com",
             numberPhone: "123-123-123"
         ))
     }

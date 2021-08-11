@@ -13,7 +13,6 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            
             PersonList(persons: persons)
                 .tabItem {
                     Image(systemName: "person.3")
@@ -26,6 +25,7 @@ struct ContentView: View {
                     Text("Section List")
                 }
         }
+        .accentColor(.pink)
     }
 }
 
